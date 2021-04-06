@@ -1,28 +1,67 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-  </div>
+	<div id="app">
+		<Header v-on:btnReturn = "scrollDown"/>	
+		<transition name = "fade" mode = "out-in">
+			<router-view :key = "$route.path"></router-view>
+		</transition>
+		<Controls v-if = "$route.name == 'project'" v-on:btnReturn = "scrollDown"/>		
+	</div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import Header from './components/Header.vue';
+import Controls from './components/Controls.vue';
 
 export default {
-  name: 'App',
-  components: {
-    HelloWorld
-  }
+	name: 'App',
+	components: {
+		Header,
+		Controls
+	},
+	data() {
+		return {
+		
+		}
+	},
+	methods: {
+		scrollDown: function(id) {			
+			this.$router.replace({name:'home'});
+			if(id != 'home') {
+				setTimeout(function(){
+					let el = document.querySelector(id);
+					let coord = el.getBoundingClientRect();
+					coord = coord.top + window.scrollY;
+					document.querySelector('html').scroll({
+						top: coord,
+						left: 0,
+						behavior: 'smooth'		
+					});  
+				}, 650);	
+			}					
+		}		
+	}
 }
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+	@import 'assets/css/style.css';
+
+	#app {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		width: 100%;
+	}
+
+	.fade-enter-active,
+	.fade-leave-active {
+		transition-duration: 0.3s;
+		transition-property: opacity;
+		transition-timing-function: ease;
+	}
+
+	.fade-enter,
+	.fade-leave-active {
+		opacity: 0;
+	}
 </style>

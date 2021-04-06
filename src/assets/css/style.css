@@ -1,0 +1,39 @@
+:root {
+    --palleteGrey: #171c24;  
+    --palleteWhite: #EEEEEE;
+    --palleteWhiteHover: #AAAAAA;
+    --palleteBlack: #000000;
+    --palleteRed: #d62839; /* RGB(214, 40, 57) */
+    --palleteRedHover:#f84a5b;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Bebas Neue", 'Georgia', "Arial";
+}
+
+body {
+    background-color: var(--palleteGrey);
+    min-height: 100vh;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: var(--palleteBlack);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: var(--palleteRed);
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: var(--palleteRedHover);
+}
