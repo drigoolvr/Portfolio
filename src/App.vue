@@ -2,7 +2,7 @@
 	<div id="app">
 		<Header v-on:btnReturn = "scrollDown"/>	
 		<transition name = "fade" mode = "out-in">
-			<router-view :key = "$route.path"></router-view>
+			<router-view :key = "$route.path" ></router-view>
 		</transition>
 		<Controls v-if = "$route.name == 'project'" v-on:btnReturn = "scrollDown"/>		
 	</div>
@@ -20,13 +20,13 @@ export default {
 	},
 	data() {
 		return {
-		
+			
 		}
 	},
 	methods: {
 		scrollDown: function(id) {			
 			this.$router.replace({name:'home'});
-			if(id != 'home') {
+			if(id != '#id-about') {
 				setTimeout(function(){
 					let el = document.querySelector(id);
 					let coord = el.getBoundingClientRect();
@@ -38,7 +38,7 @@ export default {
 					});  
 				}, 650);	
 			}					
-		}		
+		}	
 	}
 }
 </script>

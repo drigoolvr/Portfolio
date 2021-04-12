@@ -9,10 +9,15 @@
                 <div class = "project-info">
                     <div class = "project-info-content">
                         <h2>{{project.nome}}</h2>
+                        <div class = "technologies" >
+                            <ul v-for = "(tech, index) in project.tech" v-bind:key = "index">
+                                <li>{{tech}}</li>                                
+                            </ul>
+                        </div>
                         <button>Ver projeto</button>         
                     </div>                                      
                 </div>
-                <img v-bind:src = "getImgUrl(project.thumbnail)" />
+                <img v-bind:src = "getImgUrl(project.thumbnail)" v-bind:alt = "project.nome" />
                 <p class = "mobile-project-title">{{project.nome}}</p>
             </div> 
         </section>      
@@ -26,10 +31,21 @@ export default {
     data() {
         return {
             projetos: [
-                { nome:'flowstore', thumbnail: 'flowstore/flowstore-thumbnail.png' },
-                { nome:'justblue', thumbnail: 'justblue/justblue-thumbnail.png' },
-                { nome:'medclinic', thumbnail: 'medclinic/medclinic-thumbnail.png' },
-                { nome:'revox', thumbnail: 'revox/revox-thumbnail.png' },                                      
+                { nome:'flowstore', thumbnail: 'flowstore/flowstore-thumbnail.png',
+                    tech: ['HTML', 'CSS', 'JavaScript']
+                },
+
+                { nome:'justblue', thumbnail: 'justblue/justblue-thumbnail.png',
+                    tech: ['HTML', 'CSS', 'JavaScript']
+                },
+
+                { nome:'medclinic', thumbnail: 'medclinic/medclinic-thumbnail.png',
+                    tech: ['HTML', 'CSS', 'JavaScript']
+                },
+
+                { nome:'revox', thumbnail: 'revox/revox-thumbnail.png',
+                    tech: ['HTML', 'CSS', 'JavaScript']
+                },                                      
             ]      
         }
     },
@@ -123,20 +139,43 @@ export default {
         color: var(--palleteWhite);
         text-shadow: 2px 2px 0px var(--palleteBlack);
         font-size: 50px;
-        text-decoration: underline;
+        line-height: 50px;
     }
 
     .project-info button {
+        margin-top: 5px;
         padding: 5px 20px;
         border-radius: 30px;
-        border: 1px solid var(--palleteWhite);
         color: var(--palleteWhite);
-        background-color: var(--palleteRed);
-        cursor: pointer;
-        
+        background-color: rgba(0, 0, 0, 0);
+        cursor: pointer;        
         font-size: 20px;
         outline: none;
-    }    
+        text-shadow: 1px 1px 0px black;
+        border: 1px solid white;
+    }  
+
+    .technologies {
+        display: flex;
+        margin: 10px;
+    }
+
+    .technologies ul {
+        list-style-type: none;
+    }  
+
+    .technologies li {
+        color: var(--palleteWhite);
+        background-color: var(--palleteRed);
+        font-size: 15px;
+        outline: none;
+        cursor: pointer;
+        border-radius: 20px;
+        margin: 5px;
+        text-align: center;
+        padding: 5px 10px;
+        text-shadow: 1px 1px 0px black;
+    }
 
     .project img {
         position: absolute;

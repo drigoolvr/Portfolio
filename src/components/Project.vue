@@ -6,9 +6,7 @@
             <strong><p>GITHUB</p></strong>
             <a v-bind:href = "getGithub()" target = "_blank" v-text = "getName()" v-bind:title = "'Repositório: ' + getName().toUpperCase()"></a><br>
             <strong><p>DESCRIÇÃO</p></strong>
-            <p v-text = "getDesc()"></p><br>
-            <strong><p>TECNOLOGIAS UTILIZADAS</p></strong>
-            <p v-text = "getTech()"></p>          
+            <p v-text = "getDesc()"></p><br>         
             <img 
                 class = "project-picture" 
                 v-bind:alt = "getName()" 
@@ -34,8 +32,7 @@ export default {
                     github:'https://github.com/drigoolvr/FlowStore',
                     fotos:[
                         'flowstore/flowstore-full.png'
-                    ],
-                    tech: 'HTML5, CSS3, JavaScript'
+                    ]
                 },  
 
                 { 
@@ -44,8 +41,7 @@ export default {
                     github:'https://github.com/drigoolvr/Justblue',
                     fotos:[
                         'justblue/justblue-full.png'
-                    ],
-                    tech: 'HTML5, CSS3, JavaScript'
+                    ]
                 },
 
                 { 
@@ -54,8 +50,7 @@ export default {
                     github:'https://github.com/drigoolvr/Medclinic',
                     fotos:[
                         'medclinic/medclinic-full.png'
-                    ],
-                    tech: 'HTML5, CSS3, JavaScript'
+                    ]
                 },
 
                 { 
@@ -64,8 +59,7 @@ export default {
                     github:'https://github.com/drigoolvr/Revox',
                     fotos:[
                         'revox/revox-full.png'
-                    ],
-                    tech: 'HTML5, CSS3, JavaScript'
+                    ]
                 }                           
             ]
         }
@@ -101,14 +95,6 @@ export default {
                 this.$router.replace({path:'/project'});
             }            
         },  
-        getTech: function() {
-            try {
-                return this.projetos[this.projectId].tech;
-            }
-            catch {
-                this.$router.replace({path:'/project'});
-            }        
-        },      
         backToTop: function() {
             document.querySelector('html').scroll({
                 top: 0,
@@ -184,8 +170,8 @@ export default {
     }
     
     #back-to-top {
-        width: 50px;
-        height: 50px;
+        width: 60px;
+        height: 60px;
         border: 1px solid var(--palleteWhite);
         border-radius: 50px;
         cursor: pointer;
@@ -193,8 +179,10 @@ export default {
         transition: all 0.30s ease;
         text-align: center;
         font-size: 40px;
-        line-height: 50px;
+        line-height: 40px;
         background-color: var(--palleteRed);
+        box-shadow: 0px 0px 10px var(--palleteWhite);
+        text-shadow: 2px 2px 0px var(--palleteBlack);
     }
 
     #back-to-top:hover {

@@ -12,11 +12,11 @@
             </div>
 
             <div class = "container-right">                   
-                <div class = "contact-area">   
+                <address class = "contact-area">   
                     <p><i id = "email-icon" class="far fa-envelope"></i>drigo_olvr@hotmail.com</p>                  
                     <p><i id = "whatsapp-icon" class="fab fa-whatsapp"></i> (11) 95947-1015</p>
                     <p><i id = "phone-icon" class="fas fa-phone-alt"></i> (11) 2649-6278</p>
-                </div>
+                </address>
 
                 <div class = "social-media-area">
                     <a href = "https://www.linkedin.com/in/rodrigo-oliveira-51ba761b4/" target = "_blank"><i class="fab fa-linkedin social-icon"></i></a>
@@ -73,6 +73,10 @@ export default {
         font-family: "Montserrat";
         font-size: 15px;
         line-height: 25px;
+    }
+
+    .contact-area p {
+        font-style: normal;
     }
 
     h2 {

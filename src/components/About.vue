@@ -6,7 +6,7 @@
             Criar um design é muito mais que montar ou organizar, é adicionar valor e significado, é iluminar, simplificar, clarificar, dramatizar, persuadir e até divertir. Criar um design é transformar prosa em poesia - <strong>Paul Rand</strong> <i class="fas fa-quote-right red-quote-right"></i></p>            
         </div>
 
-        <img src = "../assets/images/avatar.png" class = "avatar" />       
+        <img src = "../assets/images/avatar.png" class = "avatar" alt = "Foto Rodrigo Oliveira (OlivDEV)" />       
 
         <div class = "container-right">
             <p class = "about-me">Olá,<br> sou <strong>Rodrigo Oliveira da Silva</strong>, desenvolvedor frontend, precisa de uma solução para web? Entre em contato e transformaremos a sua ideia em realidade.</p>
@@ -48,7 +48,7 @@ export default {
 
     .container-left strong {
         font-family: "Montserrat";
-        color: var(--palleteRed);
+        color: var(--palleteWhite);
     }
 
     .container-right {

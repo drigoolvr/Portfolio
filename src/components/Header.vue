@@ -59,14 +59,17 @@ export default {
         scrolling: function(id) {  
            document.querySelector(".menu-mobile").style.left = "100%";                  
            if(this.$route.name == 'home') {
-                let el = document.querySelector(id);
-                let coord = el.getBoundingClientRect();
-                coord = coord.top + window.scrollY;
-                document.querySelector('html').scroll({
-                    top: coord,
-                    left: 0,
-                    behavior: 'smooth'
-                });                 
+                if(id != '#id-about') {
+                    let el = document.querySelector(id);
+                    let coord = el.getBoundingClientRect();
+                    coord = coord.top + window.scrollY;
+                    document.querySelector('html').scroll({
+                        top: coord,
+                        left: 0,
+                        behavior: 'smooth'
+                    });                 
+                }
+                
            } else {
                this.$emit('btnReturn', id);
            }                   
