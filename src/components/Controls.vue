@@ -16,6 +16,7 @@ export default {
             previousButtonShow: true,
             nextButtonShow: true,    
             projetos: [
+                'greenworld',
                 'flowstore',
                 'justblue',
                 'medclinic',

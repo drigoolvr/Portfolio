@@ -31,6 +31,10 @@ export default {
     data() {
         return {
             projetos: [
+                { nome:'greenworld', thumbnail: 'greenworld/greenworld-thumbnail.png',
+                    tech: ['HTML', 'CSS', 'JavaScript', 'Vue JS']
+                },
+
                 { nome:'flowstore', thumbnail: 'flowstore/flowstore-thumbnail.png',
                     tech: ['HTML', 'CSS', 'JavaScript']
                 },

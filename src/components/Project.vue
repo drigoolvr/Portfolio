@@ -27,6 +27,15 @@ export default {
             projectId: 0,                   
             projetos: [
                 {   
+                    nome:'greenworld', 
+                    descricao:'Página de conscientização sobre sustentabilidade e meio ambiente',
+                    github:'https://github.com/drigoolvr/GreenWorld',
+                    fotos:[
+                        'greenworld/greenworld-full.png'
+                    ]
+                }, 
+
+                {   
                     nome:'flowstore', 
                     descricao:'Site para exposição e venda de roupas de marcas famosas',
                     github:'https://github.com/drigoolvr/FlowStore',
@@ -179,7 +188,7 @@ export default {
         transition: all 0.30s ease;
         text-align: center;
         font-size: 40px;
-        line-height: 40px;
+        line-height: 60px;
         background-color: var(--palleteRed);
         box-shadow: 0px 0px 10px var(--palleteWhite);
         text-shadow: 2px 2px 0px var(--palleteBlack);
