@@ -39,7 +39,7 @@ export default {
         font-size: 40px;
         line-height: 60px;
         background-color: var(--palleteRed);
-        box-shadow: 0px 0px 10px var(--palleteWhite);
+        box-shadow: 0px 0px 15px var(--palleteRed);
         text-shadow: 2px 2px 0px var(--palleteBlack);
         z-index: 125;
     }

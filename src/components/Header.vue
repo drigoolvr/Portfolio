@@ -176,8 +176,10 @@ export default {
         background-color: var(--palleteRed);
         z-index: -150;
         transition: all 0.5s ease;
-        border-radius: 10px 0px 10px 0px;
-        visibility: hidden;    
+        visibility: hidden; 
+        border-radius: 15px 5px 15px 5px;
+        transform:rotate(-7deg);
+        box-shadow: 0px 0px 15px var(--palleteRed); 
     }
 
     .menu ul li:hover:before {
@@ -187,6 +189,7 @@ export default {
 
     .menu ul li:hover {
         color: var(--palleteGrey);
+        font-weight: bold;
     }
 
     .menu-toggle {
