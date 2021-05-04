@@ -154,18 +154,39 @@ export default {
         display: flex;
     }
 
-    nav ul li {
+    .menu ul li {
         color: var(--palleteWhite);
         font-size: 25px;
         list-style-type: none;
         margin: 0px 10px;
         transition: all 0.5s ease;
         cursor: pointer;
-        text-shadow: 0px 0px 10px var(--palleteBlack);
+        position: relative;
+        padding: 5px;
+        z-index: 150;
+    }
+
+    .menu ul li::before {
+        content: '';
+        position: absolute;
+        top: -2px;
+        left: 0;
+        width: 100%;
+        height: 0%;
+        background-color: var(--palleteRed);
+        z-index: -150;
+        transition: all 0.5s ease;
+        border-radius: 10px 0px 10px 0px;
+        visibility: hidden;    
+    }
+
+    .menu ul li:hover:before {
+        height: 100%;
+        visibility: initial;
     }
 
     .menu ul li:hover {
-        color: var(--palleteRed);
+        color: var(--palleteGrey);
     }
 
     .menu-toggle {
