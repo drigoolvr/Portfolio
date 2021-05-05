@@ -4,36 +4,41 @@
             <h2>Habilidades</h2>                 
         </section>
 
-        <section class = "skills">
-            <div class = "habilidade" v-for = "(skill, index) in skills" v-bind:key = "index">
-                <img v-bind:src = "getImgUrl(skill.icone)" />
-                <h2>{{skill.nome}}</h2>                 
-                <p>Nível: {{skill.nivel}}</p>
-                <div class = "skill-level" v-if = "skill.nivel == 3">
-                    <i class="fas fa-star skill-star"></i>
-                    <i class="fas fa-star skill-star"></i>
-                    <i class="fas fa-star skill-star"></i>
-                    <i class="far fa-star skill-star-empty"></i>
-                    <i class="far fa-star skill-star-empty"></i>
-                </div>
+        <div class = "content">
+            <section class = "skills">            
+                <div class = "habilidade" v-for = "(skill, index) in skills" v-bind:key = "index">
+                    <img v-bind:src = "getImgUrl(skill.icone)" />
+                    <div class = "skill-data">
+                        <h2>{{skill.nome}}</h2>                 
+                        <p>Nível: {{skill.nivel}}</p>
+                        <div class = "skill-level" v-if = "skill.nivel == 3">
+                            <i class="fas fa-star skill-star"></i>
+                            <i class="fas fa-star skill-star"></i>
+                            <i class="fas fa-star skill-star"></i>
+                            <i class="far fa-star skill-star-empty"></i>
+                            <i class="far fa-star skill-star-empty"></i>
+                        </div>
 
-                <div class = "skill-level" v-if = "skill.nivel == 4">
-                    <i class="fas fa-star skill-star"></i>
-                    <i class="fas fa-star skill-star"></i>
-                    <i class="fas fa-star skill-star"></i>
-                    <i class="fas fa-star skill-star"></i>
-                    <i class="far fa-star skill-star-empty"></i>
-                </div>
+                        <div class = "skill-level" v-if = "skill.nivel == 4">
+                            <i class="fas fa-star skill-star"></i>
+                            <i class="fas fa-star skill-star"></i>
+                            <i class="fas fa-star skill-star"></i>
+                            <i class="fas fa-star skill-star"></i>
+                            <i class="far fa-star skill-star-empty"></i>
+                        </div>
 
-                <div class = "skill-level" v-if = "skill.nivel == 5">
-                    <i class="fas fa-star skill-star"></i>
-                    <i class="fas fa-star skill-star"></i>
-                    <i class="fas fa-star skill-star"></i>
-                    <i class="fas fa-star skill-star"></i>
-                    <i class="fas fa-star skill-star"></i>          
-                </div>                
-            </div>
-        </section> 
+                        <div class = "skill-level" v-if = "skill.nivel == 5">
+                            <i class="fas fa-star skill-star"></i>
+                            <i class="fas fa-star skill-star"></i>
+                            <i class="fas fa-star skill-star"></i>
+                            <i class="fas fa-star skill-star"></i>
+                            <i class="fas fa-star skill-star"></i>          
+                        </div>    
+                    </div>                            
+                </div>
+            </section> 
+            <img class = "stars-red" src = "../assets/images/stars-red.svg" />
+        </div>        
     </div>
 </template>
 
@@ -100,7 +105,9 @@ export default {
        display: flex;
        flex-direction: column;
        align-items: center;
-       padding: 20px;
+       padding: 0px 20px 20px 20px;
+       border-top: 2px solid var(--palleteRed);
+       overflow: hidden;
     }
 
     .name-area {
@@ -110,12 +117,32 @@ export default {
     }
 
     .name-area h2 {
-        color: var(--palleteGrey);
+        color: var(--palleteWhite);
         font-size: 40px;
+        line-height: 40px;
+        background-color: var(--palleteRed);
+        padding: 5px 30px;
+        border-bottom-left-radius: 30px;
+        border-bottom-right-radius: 30px;
+        box-shadow: 0px 0px 20px var(--palleteRed);
+        margin-bottom: 15px;
+        text-shadow: 2px 2px 0px black;
+    }
+
+    .content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+    }
+
+    .stars-red {
+        width: 35%;
+        height: auto;
     }
 
     .skills {
-        width: 100%;
+        width: 65%;
         height: fit-content;
         display: flex;
         justify-content: center;
@@ -127,19 +154,25 @@ export default {
 
     .habilidade {       
         display: flex;
-        flex-direction: column;
-        flex-shrink: 0;
-        align-items: center;        
+        justify-content: center;
+        align-items: center; 
+        flex-shrink: 0;       
         width: 200px;
         height: fit-content;
-        margin: 10px;
+        margin: 20px;
         padding: 10px;
     }
 
     .habilidade img {
-        width: 60%;
+        width: 40%;
         height: auto;
-        margin: auto;
+        margin-right: 15px;
+    }
+
+    .skill-data {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 
     .habilidade p {
@@ -149,6 +182,7 @@ export default {
     .habilidade h2{
         text-align: center;
         color: var(--palleteGrey);
+        letter-spacing: 1px;
     }
 
     .skill-level {
@@ -168,14 +202,21 @@ export default {
         text-shadow: 1px 1px 0px var(--palleteBlack);
     }
 
-    @media (max-width: 450px) {
-        .skills {
-            padding: 0px;
-        }
-
+    @media (max-width: 450px) {      
         .habilidade {
             width: 100%;
             margin: 10px 0px;
+        }
+    }
+
+    @media (max-width: 800px) {
+        .skills {
+            padding: 0px;
+            width: 100%;
+        }
+
+        .stars-red {
+            display: none;
         }
     }
 </style>

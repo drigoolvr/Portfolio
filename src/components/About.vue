@@ -60,10 +60,9 @@ export default {
 
     .avatar {
         width: 250px;
-        height: 250px;
-        border: 1px solid var(--palleteBlack);        
+        height: 250px;        
         border-radius: 300px;
-        box-shadow: 0px 0px 5px var(--palleteWhite);
+        box-shadow: 0px 0px 15px var(--palleteWhite);
     }
 
     .about-me::first-line {
@@ -146,12 +145,20 @@ export default {
             height: 175px;
         }
 
+        .container {
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
         .container-left {
-            width: 35%;
+            width: 80%;
+            order: 5;
+            margin: 20px;
         }
 
         .container-right {
-            width: 35%;
+            width: 40%;
+            margin-left: 50px;
         }
     }
 </style>

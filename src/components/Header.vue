@@ -276,6 +276,20 @@ export default {
         }
     }
 
+    @media (min-width: 450px) and (max-width: 800px) {
+        nav {
+            display: none;
+        }
+
+        .menu-toggle {
+            display: flex;
+        }
+
+        #menu-toggle-button:hover {
+            color: var(--palleteWhite);
+        }
+    }
+
     @media (min-width: 1500px) {
 		.container {
 			border-left: 1px solid white;

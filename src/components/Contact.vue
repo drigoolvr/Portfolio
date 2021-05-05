@@ -5,13 +5,14 @@
         <br><br>
         <div class = "content">
             <div class = "container-left">
+                <img class = "contact-img" src = "../assets/images/contact-red.svg" />
+            </div>
+
+            <div class = "container-right">  
                 <div class = "logo-area">
                     <p>Oliv<span>Dev</span></p>
                     <pre>Frontend Developer</pre>
-                </div>
-            </div>
-
-            <div class = "container-right">                   
+                </div>                 
                 <address class = "contact-area">   
                     <p><i id = "email-icon" class="far fa-envelope"></i>drigo_olvr@hotmail.com</p>                  
                     <p><i id = "whatsapp-icon" class="fab fa-whatsapp"></i> (11) 95947-1015</p>
@@ -50,7 +51,9 @@ export default {
         display: flex;
         align-items: center;
         flex-direction: column;
-        padding: 20px;
+        padding: 0px 20px 20px 20px;
+        border-top: 2px solid var(--palleteRed);
+        overflow: hidden;
     }
 
     .container hr {
@@ -63,8 +66,8 @@ export default {
 
     .content {
         display: flex;
-        justify-content: space-evenly;
-        width: 100%;
+        justify-content: space-between;
+        width: 80%;
         margin-bottom: 15px;
     }
 
@@ -75,6 +78,11 @@ export default {
         line-height: 25px;
     }
 
+    .contact-img {
+        width: 80%;
+        height: auto;
+    }
+
     .contact-area p {
         font-style: normal;
     }
@@ -82,18 +90,29 @@ export default {
     h2 {
         color: var(--palleteWhite);
         font-size: 40px;
-        margin-bottom: 15px;
+        line-height: 40px;
+        background-color: var(--palleteRed);
+        padding: 5px 30px;
+        border-bottom-left-radius: 30px;
+        border-bottom-right-radius: 30px;
+        box-shadow: 0px 0px 20px var(--palleteRed);
+        margin-bottom: 30px;
+        text-shadow: 2px 2px 0px black;
     }
 
     .container-left {
+        width: 60%;
         display: flex;
         flex-direction: column;
+        align-items: center;
+        justify-content: center;
     }
 
     .container-right {
         display: flex;
         flex-direction: column;
         align-items: center;
+        width: 40%;
     }
 
     .logo-area {
@@ -101,6 +120,7 @@ export default {
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        margin-bottom: 30px;
     }
 
     .logo-area p {
@@ -178,8 +198,12 @@ export default {
             flex-direction: column;
         }
 
+        .container-right {
+            width: 100%;
+        }
+
         .container-left {
-            margin-bottom: 20px;
+            display: none;
         }
     }
 </style>

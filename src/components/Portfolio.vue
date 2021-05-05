@@ -66,12 +66,14 @@ export default {
     
 <style scoped>
    .container {
-        padding: 20px;
+        padding: 0px 20px 20px 20px;
         width: 100%;
         max-width: 1500px;
         display: flex;
         flex-direction: column;
         align-items: center;
+        overflow: hidden;
+        border-top: 2px ridge var(--palleteRed);
     }
 
     .name-area {
@@ -82,9 +84,15 @@ export default {
 
     .name-area h2 {
         color: var(--palleteWhite);
-        text-shadow: 2px 2px 0px var(--palleteBlack);
         font-size: 40px;
         line-height: 40px;
+        background-color: var(--palleteRed);
+        padding: 5px 30px;
+        border-bottom-left-radius: 30px;
+        border-bottom-right-radius: 30px;
+        box-shadow: 0px 0px 20px var(--palleteRed);
+        margin-bottom: 30px;
+        text-shadow: 2px 2px 0px black;
     }
 
     .name-area p {
@@ -104,8 +112,10 @@ export default {
     }
 
     .project {
-        width: 40%;
-        height: 300px;
+        width: 40vw;
+        max-width: 700px;
+        max-height: 350px;
+        height: 20vw;
         position: relative;
         overflow: hidden;
         cursor: pointer;
@@ -200,8 +210,8 @@ export default {
 
     @media (max-width: 450px) {
         .project {
-            width: 100%;
-            height: 250px;
+            width: 100vw;
+            height: 50vw;
             margin: 10px 0px;
         }
 
@@ -214,11 +224,7 @@ export default {
         }
     }
 
-    @media (min-width: 450px) and (max-width: 800px) {
-        .project {
-            height: 200px;
-        }
-
+    @media (min-width: 450px) and (max-width: 800px) {       
         .project:hover .project-info {
             height: 0%;
         }
