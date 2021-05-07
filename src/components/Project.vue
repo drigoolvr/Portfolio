@@ -37,7 +37,7 @@ export default {
 
                 {   
                     nome:'flowstore', 
-                    descricao:'Site para exposição e venda de roupas de marcas famosas',
+                    descricao:'Página de venda de roupas de marcas famosas',
                     github:'https://github.com/drigoolvr/FlowStore',
                     fotos:[
                         'flowstore/flowstore-full.png'
@@ -46,7 +46,7 @@ export default {
 
                 { 
                     nome:'justblue', 
-                    descricao:'Site para uma empresa de consultoria empresarial', 
+                    descricao:'Página de uma empresa especialziada em consultoria empresarial', 
                     github:'https://github.com/drigoolvr/Justblue',
                     fotos:[
                         'justblue/justblue-full.png'
@@ -55,7 +55,7 @@ export default {
 
                 { 
                     nome:'medclinic', 
-                    descricao:'Site de uma clínica particular com divulgação de notícias médicas',
+                    descricao:'Página de uma clínica particular com divulgação de notícias médicas',
                     github:'https://github.com/drigoolvr/Medclinic',
                     fotos:[
                         'medclinic/medclinic-full.png'
@@ -64,7 +64,7 @@ export default {
 
                 { 
                     nome:'revox', 
-                    descricao:'Site de uma empresa de design gráfico', 
+                    descricao:'Página de uma empresa de design gráfico', 
                     github:'https://github.com/drigoolvr/Revox',
                     fotos:[
                         'revox/revox-full.png'

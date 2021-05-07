@@ -47,4 +47,10 @@ export default {
     #back-to-top:hover {
         background-color: var(--palleteRedHover);
     }
+
+    @media (min-width: 1500px) {
+        #back-to-top {
+            right: calc((100vw - 1500px) / 2 + 30px);
+        }
+    }
 </style>
