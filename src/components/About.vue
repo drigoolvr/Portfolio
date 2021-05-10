@@ -1,22 +1,25 @@
 <template>
     <div class = "container" id = "id-about">
-        <div class = "container-left">
-            <i class="fas fa-quote-left red-quote-left"></i>
-            <p class = "quote">           
-            Criar um design é muito mais que montar ou organizar, é adicionar valor e significado, é iluminar, simplificar, clarificar, dramatizar, persuadir e até divertir. Criar um design é transformar prosa em poesia - <strong>Paul Rand</strong> <i class="fas fa-quote-right red-quote-right"></i></p>            
+        <div class = "about-content">
+            <div class = "container-left">
+                <i class="fas fa-quote-left red-quote-left"></i>
+                <p class = "quote">           
+                Criar um design é muito mais que montar ou organizar, é adicionar valor e significado, é iluminar, simplificar, clarificar, dramatizar, persuadir e até divertir. Criar um design é transformar prosa em poesia - <strong>Paul Rand</strong> <i class="fas fa-quote-right red-quote-right"></i></p>            
+            </div>
+
+            <img src = "../assets/images/avatar.png" class = "avatar" alt = "Foto Rodrigo Oliveira (OlivDEV)" />       
+
+            <div class = "container-right">
+                <p class = "about-me">Olá,<br> sou <strong>Rodrigo Oliveira da Silva</strong>, desenvolvedor frontend, precisa de uma solução para web? Entre em contato e transformaremos a sua ideia em realidade.</p>
+
+                <ul class = "service-list">
+                    <li><i class="fas fa-check-circle red-check"></i>Websites</li>
+                    <li><i class="fas fa-check-circle red-check"></i>Landing Pages</li>
+                    <li><i class="fas fa-check-circle red-check"></i>Single Page Applications</li>
+                </ul>         
+            </div>
         </div>
-
-        <img src = "../assets/images/avatar.png" class = "avatar" alt = "Foto Rodrigo Oliveira (OlivDEV)" />       
-
-        <div class = "container-right">
-            <p class = "about-me">Olá,<br> sou <strong>Rodrigo Oliveira da Silva</strong>, desenvolvedor frontend, precisa de uma solução para web? Entre em contato e transformaremos a sua ideia em realidade.</p>
-
-            <ul class = "service-list">
-                <li><i class="fas fa-check-circle red-check"></i>Websites</li>
-                <li><i class="fas fa-check-circle red-check"></i>Landing Pages</li>
-                <li><i class="fas fa-check-circle red-check"></i>Single Page Applications</li>
-            </ul>         
-        </div>
+        
     </div>
 </template>
 
@@ -33,12 +36,18 @@ export default {
     
 <style scoped>
    .container {
-        width: 100%;
-        max-width: 1500px;
-        background-color: var(--palleteGrey);
+        width: 100%;        
+        background-color: var(--palleteGrey);  
+        display: flex;
+        justify-content: center;      
+    }
+
+    .about-content {
         display: flex;
         justify-content: space-between;
         padding: 20px;
+        max-width: 1500px;
+        width: 100%;
     }
 
     .container-left {
@@ -123,7 +132,7 @@ export default {
     }
 
     @media (max-width: 450px) {
-        .container {
+        .about-content {
             flex-direction: column;
             align-items: center;
         }
@@ -145,7 +154,7 @@ export default {
             height: 175px;
         }
 
-        .container {
+        .about-content {
             flex-wrap: wrap;
             justify-content: center;
         }

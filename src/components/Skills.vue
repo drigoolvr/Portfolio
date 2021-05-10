@@ -100,7 +100,6 @@ export default {
 <style scoped>
    .container-skills {
        width: 100%;
-       max-width: 1500px;
        background-color: var(--palleteWhite);   
        display: flex;
        flex-direction: column;
@@ -134,6 +133,7 @@ export default {
         justify-content: space-between;
         align-items: center;
         width: 100%;
+        max-width: 1500px;
     }
 
     .stars-red {

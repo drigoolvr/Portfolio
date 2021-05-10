@@ -48,17 +48,9 @@ export default {
 <style scoped>
    .container-home {
         width: 100%;
-        max-width: 1500px;
         display: flex;
         flex-direction: column;
         align-items: center;  
         overflow-x: hidden;      
-   }  
-   
-   @media (min-width: 1500px) {
-		.container-home {
-			border-left: 1px solid white;
-			border-right: 1px solid white;
-		}
-	}
+   }     
 </style>

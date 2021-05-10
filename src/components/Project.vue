@@ -129,7 +129,9 @@ export default {
 <style scoped>
     .container {
         width: 100%;
-        max-width: 1500px;
+        display: flex;
+        justify-content: center;
+        
     }
 
     .project-page {
@@ -138,6 +140,7 @@ export default {
         justify-content: center;
         align-items: center;
         width: 100%;
+        max-width: 1500px;
         height: fit-content;
         padding-top: 30px;
         padding-bottom: 80px;
@@ -215,12 +218,4 @@ export default {
             width: 85%;
         }
     }
-
-    @media (min-width: 1500px) {
-		.container {
-			border-left: 1px solid white;
-			border-right: 1px solid white;
-		}
-	}
-
 </style>

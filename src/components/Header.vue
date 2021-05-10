@@ -80,8 +80,7 @@ export default {
     
 <style scoped>
    .container {
-        width: 100%;
-        max-width: 1500px;
+        width: 100%;        
         height:fit-content;
         background-color: var(--palleteGrey);
         display: flex;
@@ -98,6 +97,7 @@ export default {
 
     header {
         width: 100%;  
+        max-width: 1500px;
         height: fit-content;      
         display: flex;
         justify-content: space-between;
@@ -289,11 +289,4 @@ export default {
             color: var(--palleteWhite);
         }
     }
-
-    @media (min-width: 1500px) {
-		.container {
-			border-left: 1px solid white;
-			border-right: 1px solid white;
-		}
-	}
 </style>

@@ -68,7 +68,6 @@ export default {
    .container {
         padding: 0px 20px 20px 20px;
         width: 100%;
-        max-width: 1500px;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -105,6 +104,7 @@ export default {
 
     .projects-area {
         width: 100%;
+        max-width: 1500px;
         display: flex;
         justify-content: center;
         flex-wrap: wrap;

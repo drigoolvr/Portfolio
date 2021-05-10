@@ -46,7 +46,7 @@ export default {
 <style scoped>
    .container {
         width: 100%;
-        max-width: 1500px;
+        
         background-color: #060b13;
         display: flex;
         align-items: center;
@@ -68,6 +68,7 @@ export default {
         display: flex;
         justify-content: space-between;
         width: 80%;
+        max-width: 1500px;
         margin-bottom: 15px;
     }
 
